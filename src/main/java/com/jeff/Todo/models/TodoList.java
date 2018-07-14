@@ -6,10 +6,11 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-@JsonFormat(shape = JsonFormat.Shape.NATURAL)
+/*@JsonFormat(shape = JsonFormat.Shape.ANY)*/
+
 public class TodoList {
 
-	@JsonProperty
+
 	private List<TodoItem> items;
 	private String listName;
 	private long id;
@@ -41,6 +42,10 @@ public class TodoList {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public void add(TodoItem newTodoItem) {
+		this.items.add(newTodoItem);		
 	}
 	
 }

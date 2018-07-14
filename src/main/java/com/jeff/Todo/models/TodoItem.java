@@ -3,15 +3,19 @@
  */
 package com.jeff.Todo.models;
 
+
 /**
  * @author Jeff
  *
  */
+
 public class TodoItem {
+
 	private String text;
 	private Boolean done;
 	private long id;
 	private long listId;
+	
 	
 	public TodoItem(String text) {
 		super();

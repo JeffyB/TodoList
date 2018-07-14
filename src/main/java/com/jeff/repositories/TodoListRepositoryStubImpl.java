@@ -3,6 +3,7 @@ package com.jeff.repositories;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.jeff.Todo.models.TodoItem;
 import com.jeff.Todo.models.TodoList;
 
@@ -21,6 +22,7 @@ public class TodoListRepositoryStubImpl implements TodoListRepository{
 	}
 	
 	@Override
+	@JsonSerialize
 	public List<TodoList> getAllTodoLists() {
 		return todoLists;
 	}
@@ -43,7 +45,8 @@ public class TodoListRepositoryStubImpl implements TodoListRepository{
 		TodoItem newTodoItem = new TodoItem(itemText);
 		newTodoItem.setId(itemId);
 		newTodoItem.setListId(listId);
-		todoItems.add(newTodoItem);
+		/*todoItems.add(newTodoItem); I think this was incorrect.  added new line below, and also new .add method in TodoList.java   */
+		getTodoList(listId).add(newTodoItem);				
 		return itemId;
 	}
 

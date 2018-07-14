@@ -31,6 +31,8 @@ public class TodoApplication {
 		Long exampleTodoList2Id = todoListRepository.addTodoList("Todo List 2");
 		todoListRepository.addTodoItem("Item 1", exampleTodoList2Id);
 		todoListRepository.addTodoItem("Item 2", exampleTodoList2Id);
+		System.out.println(todoListRepository.getAllTodoLists());
+		System.out.println(exampleTodoList1Id);
 		
 	}
 	
