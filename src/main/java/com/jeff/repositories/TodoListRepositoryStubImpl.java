@@ -46,7 +46,7 @@ public class TodoListRepositoryStubImpl implements TodoListRepository{
 		newTodoItem.setId(itemId);
 		newTodoItem.setListId(listId);
 		/*todoItems.add(newTodoItem); I think this was incorrect.  added new line below, and also new .add method in TodoList.java   */
-		getTodoList(listId).add(newTodoItem);				
+		getTodoList(listId).addTodoItem(newTodoItem);				
 		return itemId;
 	}
 

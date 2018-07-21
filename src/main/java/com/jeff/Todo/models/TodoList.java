@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-/*@JsonFormat(shape = JsonFormat.Shape.ANY)*/
+
 
 public class TodoList {
 
@@ -44,7 +44,7 @@ public class TodoList {
 		this.id = id;
 	}
 
-	public void add(TodoItem newTodoItem) {
+	public void addTodoItem(TodoItem newTodoItem) {
 		this.items.add(newTodoItem);		
 	}
 	
